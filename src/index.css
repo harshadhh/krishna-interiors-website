@@ -1,0 +1,56 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF7F2;
+  --color-terracotta: #BA5A45;
+  --color-forest: #1B3A30;
+  --color-brass: #D4AF37;
+  
+  --font-display: 'Clash Display', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Lora', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-forest);
+  font-family: var(--font-serif);
+  overflow-x: hidden;
+}
+
+/* Hero Image Masking */
+.mask-hero-image {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+@media (min-width: 768px) {
+  .mask-hero-image {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 40%, black 100%);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-terracotta);
+  border-radius: 4px;
+}
