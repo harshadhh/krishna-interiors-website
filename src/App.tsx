@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
 import { useEffect } from "react";
 
@@ -73,7 +73,7 @@ export default function App() {
   return (
     <SiteDataProvider>
       <DynamicFavicon />
-      <BrowserRouter basename="/krishna-interiors-website">
+      <HashRouter>
         <ScrollToTop />
         <div className="w-full bg-ivory text-forest selection:bg-terracotta selection:text-ivory min-h-screen flex flex-col">
           <Navbar />
@@ -83,7 +83,7 @@ export default function App() {
           <FloatingButtons />
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </SiteDataProvider>
   );
 }
