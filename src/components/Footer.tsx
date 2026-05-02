@@ -74,13 +74,13 @@ export function Footer() {
           <div>
             <h4 className="font-display uppercase tracking-widest text-sm font-semibold text-brass mb-6">Contact</h4>
             <div className="flex flex-col gap-5 text-ivory/70">
-              <a href="mailto:bishnoimsuresh@gmail.com" className="flex items-start gap-3 hover:text-white transition-colors group">
+              <a href={`mailto:${data.contact.email}`} className="flex items-start gap-3 hover:text-white transition-colors group">
                 <div className="w-[14px] flex justify-center mt-0.5">
                   <span className="text-terracotta text-xs font-display">✉</span>
                 </div>
                 <div>
                   <p className="font-display text-xs uppercase tracking-wider font-semibold text-ivory/50 mb-1">Email</p>
-                  <p className="font-serif text-sm font-medium text-ivory group-hover:text-white transition-colors break-all">bishnoimsuresh@gmail.com</p>
+                  <p className="font-serif text-sm font-medium text-ivory group-hover:text-white transition-colors break-all">{data.contact.email}</p>
                 </div>
               </a>
               <a href="tel:+919549234994" className="flex items-start gap-3 hover:text-white transition-colors group">
