@@ -353,7 +353,7 @@ const defaultSiteData: SiteData = {
   ],
   contact: {
     phone: "+91 9876543210, 087930 93953",
-    email: "bishnoimsuresh@gmail.com",
+    email: "bishnoimrsuresh@gmail.com",
     address: "Sr. No. 282, Porwal Road, Near Kamlai Dairy, Kand Nagar, Lohegaon, Pune - 411047"
   }
 };
